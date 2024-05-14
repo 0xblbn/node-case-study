@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchDiscoverMovies = async () => {
-  const tmdbApiKey = "b707ca1613fbe86adacb3c019d06093f";
+  const tmdbApiKey = "";
   console.log(tmdbApiKey);
   const queryParams = new URLSearchParams({
     include_adult: 'false',
