@@ -24,7 +24,7 @@ export class MovieService {
     return this.movieModel.findOneAndDelete({ id }).exec();
   }
 
-  async writeDetailsToDb(): Promise<Boolean>{
+  async writeDetailsToDb(): Promise<Boolean> {
     const movies = await fetchDiscoverMovies();
 
     for (let i = 0; i < movies.length; i++) {
@@ -43,6 +43,5 @@ export class MovieService {
       await this.save(movieObj);
     }
     return true;
-  
   }
 }

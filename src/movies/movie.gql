@@ -1,0 +1,19 @@
+type Movie {
+  id: ID!
+  name: String!
+  overview: String!
+  popularity: Float!
+  voteAverage: String!
+  voteCount: Int!
+  releaseDate: String!
+  genres: [Genre!]!
+}
+
+type Genre {
+  id: Int!
+  name: String!
+}
+
+type Query {
+  findById(id: ID!): Movie
+}
