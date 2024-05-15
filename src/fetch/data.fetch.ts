@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 export const fetchDiscoverMovies = async () => {
-  const tmdbApiKey = "";
-  console.log(tmdbApiKey);
+  const tmdbApiKey = process.env.TMDB_API_KEY;
   const queryParams = new URLSearchParams({
     include_adult: 'false',
     include_video: 'false',
@@ -23,7 +22,7 @@ export const fetchDiscoverMovies = async () => {
 };
 
 export const fetchMovieDetails = async (movieId: string) => {
-  const tmdbApiKey = "b707ca1613fbe86adacb3c019d06093f"
+  const tmdbApiKey = process.env.TMDB_API_KEY;
 
   const response = await axios.get(
     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbApiKey}`,
