@@ -11,6 +11,14 @@ Before running the application, you need to fill up the database with movie deta
     ```bash
     $ yarn install
     ```
+## Environment Variables
+
+Before running the application, make sure to set up your environment variables. You need to create a `.env` file based on the provided `.env.example` file and set the appropriate values.Then, open the .env file and update the values as needed. For example, if you have an API key, set API_KEY="" in the .env file.
+
+```bash
+$ cp .env.example .env
+```
+   
 
 2. **Run the Application**: Start the Docker containers to run the movie API by running:
 
@@ -122,6 +130,8 @@ After setting up the application and database, you can try out the following end
     ```
 
     This command will run tests for the endpoints using mock data, allowing you to verify the functionality of the API without affecting the actual database.
+
+
 
 You're now ready to interact with the movie API! Enjoy testing and developing with it.
 
