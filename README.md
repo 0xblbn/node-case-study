@@ -11,16 +11,16 @@ Before running the application, you need to fill up the database with movie deta
     ```bash
     $ yarn install
     ```
-## Environment Variables
+2. **Environment Variables**: Before running the application, make sure to set up your environment variables. You need to create a `.env` file based on the provided `.env.example` file and set the appropriate values.Then, open the .env file and update the values as needed. For example, if you have an API key, set API_KEY="" in the .env file.
+    ```bash
+    $ cp .env.example .env
+    ```
 
-Before running the application, make sure to set up your environment variables. You need to create a `.env` file based on the provided `.env.example` file and set the appropriate values.Then, open the .env file and update the values as needed. For example, if you have an API key, set API_KEY="" in the .env file.
 
-```bash
-$ cp .env.example .env
-```
+
    
 
-2. **Run the Application**: Start the Docker containers to run the movie API by running:
+3. **Run the Application**: Start the Docker containers to run the movie API by running:
 
     ```bash
     $ docker-compose up
@@ -28,7 +28,7 @@ $ cp .env.example .env
 
     This will start the Docker containers required for running the movie API. You should see the application logs in the terminal.
 
-3. **Access Swagger UI**: After starting the application, you can explore all available endpoints using Swagger UI. Simply navigate to the following URL in your web browser:
+4. **Access Swagger UI**: After starting the application, you can explore all available endpoints using Swagger UI. Simply navigate to the following URL in your web browser:
 
     ```
     http://localhost:3000/api
@@ -36,7 +36,7 @@ $ cp .env.example .env
 
     This will open Swagger UI, where you can interact with the API documentation and test the endpoints.
 
-4. **Fill Up the Database**: Send a POST request to the `/fetch/writeDetailsToDb` endpoint to populate the database with movie details. You can use tools like cURL, Postman, or your preferred API client to do this. For example, using cURL:
+5. **Fill Up the Database**: Send a POST request to the `/fetch/writeDetailsToDb` endpoint to populate the database with movie details. You can use tools like cURL, Postman, or your preferred API client to do this. For example, using cURL:
 
     ```bash
     $ curl -X POST http://localhost:3000/fetch/writeDetailsToDb
